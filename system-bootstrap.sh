@@ -31,10 +31,10 @@ echo "ALL ALL = (root) NOPASSWD: `pwd`/awesome/widgets/brightness/set_brightness
   | sudo tee --append /etc/sudoers
 
 # System update
-sudo pacman --noconfirm -Syu
+sudo pacman -Syu
 
 # Install essential programs and utilities
-sudo pacman --noconfirm -S alsa-utils pulseaudio pavucontrol xorg-server \
+sudo pacman -S alsa-utils pulseaudio pavucontrol xorg-server \
   xorg-xinit mesa xorg-xinput htop git wget curl zsh make cmake terminator \
   openssh networkmanager network-manager-applet screen screenfetch \
   powerline-fonts ttf-ubuntu-font-family tamsyn-font ttf-droid ttf-dejavu \
@@ -84,11 +84,10 @@ rm time-won.zip
 
 # Setting the gtk theme and icons
 mkdir -p ~/.config/gtk-3.0
-GTK3_SETTINGS='~/.config/gtk-3.0/settings.ini'
-echo '[Settings]'                            > $GTK3_SETTINGS
-echo 'gtk-icon-theme-name = Qogir-dark'     >> $GTK3_SETTINGS
-echo 'gtk-theme-name = Shades-of-gray-Arch' >> $GTK3_SETTINGS
-echo 'gtk-font-name = Cantarell 11'         >> $GTK3_SETTINGS
+echo '[Settings]'                            > ~/.config/gtk-3.0/settings.ini
+echo 'gtk-icon-theme-name = Qogir-dark'     >> ~/.config/gtk-3.0/settings.ini
+echo 'gtk-theme-name = Shades-of-gray-Arch' >> ~/.config/gtk-3.0/settings.ini
+echo 'gtk-font-name = Cantarell 11'         >> ~/.config/gtk-3.0/settings.ini
 
 echo "Bootstrap completed! Now you can reboot to start using awesome. Enjoy it ;)"
 

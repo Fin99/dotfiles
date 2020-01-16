@@ -1,7 +1,6 @@
 #!/bin/sh
 
 # Switch escape and capslock
-setxkbmap -option caps:swapescape
 
 # Enable tap to click
 xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
